@@ -34,12 +34,16 @@ private const val ITALIAN = 11
 private const val FILIPINO = 12
 private const val FRENCH = 13
 private const val CROATIAN = 14
+private const val FARSI = 15
+private const val GERMAN = 16
+private const val THAI = 17
+private const val JAPANESE = 18
 
 val languages: Map<Int, String> =
     mapOf(
         Pair(ENGLISH, "en"),
         Pair(TURKISH, "tr"),
-        Pair(DUTCH,"nl"),
+        Pair(DUTCH, "nl"),
         Pair(RUSSIAN, "ru"),
         Pair(POLISH, "pl"),
         Pair(PORTUGUESE, "pt"),
@@ -50,7 +54,11 @@ val languages: Map<Int, String> =
         Pair(ITALIAN, "it"),
         Pair(FILIPINO, "fil"),
         Pair(FRENCH, "fr"),
-        Pair(CROATIAN,"hr")
+        Pair(CROATIAN, "hr"),
+        Pair(FARSI, "fa"),
+        Pair(GERMAN, "de"),
+        Pair(THAI, "th"),
+        Pair(JAPANESE, "ja")
     )
 
 fun getLanguageConfig(languageNumber: Int = Prefs[Prefs.LANGUAGE]): String {
@@ -90,6 +98,10 @@ fun getLanguageDesc(language: Int = getLanguageNumber()): String {
             FILIPINO -> R.string.locale_fil
             FRENCH -> R.string.locale_fr
             CROATIAN -> R.string.locale_hr
+            FARSI -> R.string.locale_fa
+            GERMAN -> R.string.locale_de
+            THAI -> R.string.locale_th
+            JAPANESE -> R.string.locale_ja
             else -> R.string.follow_system
         }
     )
